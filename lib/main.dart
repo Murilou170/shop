@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:shop/pages/products_overview_page.dart';
 
@@ -14,10 +16,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
+        accentColor: Colors.deepOrange,
+        fontFamily: 'Lato',
       ),
       home: ProductsOverviewPage(),
-      debugShowCheckedModeBanner: false, 
+      debugShowCheckedModeBanner: false,
     );
   }
 }
