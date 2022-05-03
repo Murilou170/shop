@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop/data/dummy_data.dart';
 
+import '../components/product_item.dart';
 import '../product.dart';
 
 class ProductsOverviewPage extends StatelessWidget {
@@ -19,7 +20,7 @@ class ProductsOverviewPage extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: GridView.builder(
           itemCount: loadedProducts.length,
-          itemBuilder: (ctx, i) => Text(loadedProducts[i].title),
+          itemBuilder: (ctx, i) => ProductItem(product: loadedProducts[i]),
           // ignore: prefer_const_constructors
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
